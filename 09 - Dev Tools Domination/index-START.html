@@ -18,29 +18,59 @@
     }
 
     // Regular
-
+    console.log("regular console text");
     // Interpolated
-
+    console.log("this is %s that I'm feeling", "love");
+    console.log("this is an %o object", dogs);
     // Styled
-
+    console.log("Oh, how %c stylish", "font-size: 25px; color: hotpink; background: yellow; font-family: Arial");
     // warning!
-
+    console.warn("dooooooon't... push that button!");
     // Error :|
-
+    console.error('The roof is on fire!!!');
     // Info
-
+    console.info("did you know that ice cream is better than cake?");
     // Testing
+    const p = document.querySelector('p');
 
+    console.assert(p.classList.contains("prampam"), "There should be some 'prampam' !");
     // clearing
-
+    console.clear();
     // Viewing DOM Elements
+    console.log(p);
+    console.dir(p);
+    console.dirxml(p);
 
+    console.clear();
     // Grouping together
-
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} old`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      console.groupEnd(`${dog.name}`);
+    });
+    
     // counting
-
+    console.count("Wes");
+    console.count("Wes");
+    console.count("Steve");
+    console.count("Steve");
+    console.count("Steve");
+    console.count("Wes");
+    console.count("Steve");
+    console.count();
     // timing
+    console.time("fetch the data");
+    fetch('https://api.github.com/users/augustinaweb')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd("fetch the data");
+        console.log(data);
+      });
 
+    // table
+    console.table(dogs);
   </script>
 </body>
 </html>

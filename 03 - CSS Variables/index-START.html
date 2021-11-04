@@ -6,7 +6,7 @@
 </head>
 <body>
   <h2>Update CSS Variables with <span class='hl'>JS</span></h2>
-
+  <!-- onchange="adjustSpacing()" oninput="adjustSpacing()"  -->
   <div class="controls">
     <label for="spacing">Spacing:</label>
     <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
@@ -18,9 +18,20 @@
     <input id="base" type="color" name="base" value="#ffc600">
   </div>
 
-  <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+  <img id="img" src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
 
   <style>
+  /*   :root {
+      --color: #ffc600
+    }
+
+    img {      
+      background-color: var(--color);      
+    }
+
+    .hl {
+      color: var(--color);
+    }  */ 
 
     /*
       misc styles, nothing to do with CSS variables
@@ -44,8 +55,6 @@
     }
   </style>
 
-  <script>
-  </script>
-
+  <script src="script.js" defer></script>
 </body>
 </html>

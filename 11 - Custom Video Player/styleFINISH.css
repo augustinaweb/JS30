@@ -71,7 +71,7 @@ body {
   transform: translateY(100%) translateY(-5px);
   transition: all .3s;
   flex-wrap: wrap;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.1);  
 }
 
 .player:hover .player__controls {

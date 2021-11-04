@@ -26,6 +26,8 @@
     .panels {
       min-height: 100vh;
       overflow: hidden;
+      /**/display: flex; 
+      /**/justify-content: space-between;      
     }
 
     .panel {
@@ -43,7 +45,15 @@
       font-size: 20px;
       background-size: cover;
       background-position: center;
+      /**/display: flex;
+      /**/flex-direction: column;
+      /**/justify-content: space-around;
+      /**/flex: 1 1 auto;      
     }
+
+    /**/.panel:hover {
+    /**/  cursor: pointer;
+    /**/}
 
     .panel1 { background-image:url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
     .panel2 { background-image:url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500); }
@@ -62,19 +72,41 @@
       text-transform: uppercase;
       font-family: 'Amatic SC', cursive;
       text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-      font-size: 2em;
+      font-size: 2em;      
     }
     
     .panel p:nth-child(2) {
       font-size: 4em;
     }
 
-    .panel.open {
-      font-size: 40px;
+    /**/.panel p:nth-child(1) {
+    /**/  transform: translateY(-20vh);
+    /**/}
+
+    /**/.panel.open p:nth-child(1) {
+    /**/  transform: translateY(0);
+    /**/}
+
+    /**/.panel p:nth-child(3) {
+    /**/  transform: translateY(20vh);          
+    /**/}
+
+    /**/.panel.open p:nth-child(3) {
+    /**/  transform: translateY(0);          
+    /**/}
+
+
+    /**/.panel.open {
+    /**/  font-size: 40px;
+    /**/  flex: 5 1 auto;     
+    /**/}
+
+    /**/@media screen and (max-width: 600px) {
+    /**/  .panel p {
+    /**/    font-size: 1em;
+    /**/  }
     }
-
   </style>
-
 
   <div class="panels">
     <div class="panel panel1">
@@ -104,11 +136,6 @@
     </div>
   </div>
 
-  <script>
-
-  </script>
-
-
-
+  <script src="script.js" defer></script>
 </body>
 </html>
